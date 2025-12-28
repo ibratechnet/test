@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate to Bonheur Tech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #150f20;
+      color: #372c52;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 90%;
+      margin: 60px auto;
+      background-color: violet;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .momo-info {
+      margin-top: 30px;
+      font-size: 20px;
+      background-color: violet;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid white;
+    }
+
+    .momo-info span {
+      color: green;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .thanks {
+      margin-top: 30px;
+      color: #777;
+      font-style: italic;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .toggle-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Dark mode styles */
+    body.dark {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark .container {
+      background-color: #1e1e1e;
+      color: #eee;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark .momo-info {
+      background-color: #2b2b2b;
+      border: 1px solid #444;
+    }
+
+    body.dark .thanks {
+      color: #bbb;
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      p,
+      .momo-info {
+        font-size: 16px;
+      }
+
+      .toggle-btn {
+        font-size: 24px;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleMode()" id="modeToggle" title="Switch Theme">🌙</button>
+
+  <div class="container">
+    <h1 style="color:green;">Support Bonheur-Tech Services</h1>
+    <p>Your support helps us grow and reach more people. You can Support using the following Mobile Money info:</p>
+
+    <div class="momo-info">
+      <p><strong>MoMo Number:</strong><br> <span>+250 795 584 260</span></p>
+      <p><strong>Account Name:</strong> Bonheur IGIHOZO</p>
+      <p><strong>Reference:</strong> <code>Support</code></p>
+    </div>
+
+    <p class="thanks">Thank you for supporting Bonheur-Tech services!</p>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const toggleBtn = document.getElementById('modeToggle');
+      body.classList.toggle('dark');
+
+      // Change icon
+      if (body.classList.contains('dark')) {
+        toggleBtn.textContent = '☀️';
+      } else {
+        toggleBtn.textContent = '🌙';
+      }
+    }
+  </script>
+
+</body>
+</html>
+
